@@ -17,14 +17,27 @@ namespace EMS
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void NewEmployee_MouseClick(object sender, MouseEventArgs e)
         {
-
+            NewHiring Nh = new()
+            {
+                Tag = this
+            };
+            Nh.Show(this);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void NewEmployee_Click(object sender, EventArgs e)
+        {
+            NewHiring Nh = new()
+            {
+                Tag = this
+            };
+            Nh.Show(this);
         }
     }
 }

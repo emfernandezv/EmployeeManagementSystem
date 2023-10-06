@@ -74,6 +74,7 @@
             // 
             // Id
             // 
+            this.Id.Enabled = false;
             this.Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Id.Location = new System.Drawing.Point(199, 34);
             this.Id.Name = "Id";
@@ -169,6 +170,7 @@
             // 
             // CreatedBy
             // 
+            this.CreatedBy.Enabled = false;
             this.CreatedBy.Location = new System.Drawing.Point(187, 39);
             this.CreatedBy.Name = "CreatedBy";
             this.CreatedBy.Size = new System.Drawing.Size(150, 35);
@@ -287,6 +289,7 @@
             // 
             // ModifiedDate
             // 
+            this.ModifiedDate.Enabled = false;
             this.ModifiedDate.Location = new System.Drawing.Point(551, 104);
             this.ModifiedDate.Name = "ModifiedDate";
             this.ModifiedDate.Size = new System.Drawing.Size(188, 35);
@@ -303,6 +306,7 @@
             // 
             // ModifiedBy
             // 
+            this.ModifiedBy.Enabled = false;
             this.ModifiedBy.Location = new System.Drawing.Point(187, 104);
             this.ModifiedBy.Name = "ModifiedBy";
             this.ModifiedBy.Size = new System.Drawing.Size(150, 35);
@@ -319,6 +323,7 @@
             // 
             // CreatedDate
             // 
+            this.CreatedDate.Enabled = false;
             this.CreatedDate.Location = new System.Drawing.Point(551, 39);
             this.CreatedDate.Name = "CreatedDate";
             this.CreatedDate.Size = new System.Drawing.Size(188, 35);

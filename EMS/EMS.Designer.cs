@@ -33,9 +33,6 @@
             this.EditEmployee = new System.Windows.Forms.Button();
             this.ViewEmployee = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SearchTag = new System.Windows.Forms.Label();
-            this.SearchBox = new System.Windows.Forms.TextBox();
-            this.Search = new System.Windows.Forms.Button();
             this.Vendor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DayOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +46,9 @@
             this.CreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ModifiedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ModifiedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SearchTag = new System.Windows.Forms.Label();
+            this.SearchBox = new System.Windows.Forms.TextBox();
+            this.Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             this.NewEmployee.TabIndex = 0;
             this.NewEmployee.Text = "&Add";
             this.NewEmployee.UseVisualStyleBackColor = true;
-            this.NewEmployee.Click += new System.EventHandler(this.button1_Click);
+            this.NewEmployee.Click += new System.EventHandler(this.NewEmployee_Click);
             // 
             // EditEmployee
             // 
@@ -107,34 +107,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1611, 929);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // SearchTag
-            // 
-            this.SearchTag.AutoSize = true;
-            this.SearchTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTag.Location = new System.Drawing.Point(29, 25);
-            this.SearchTag.Name = "SearchTag";
-            this.SearchTag.Size = new System.Drawing.Size(191, 29);
-            this.SearchTag.TabIndex = 4;
-            this.SearchTag.Text = "Search by Name";
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.Location = new System.Drawing.Point(226, 23);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(297, 35);
-            this.SearchBox.TabIndex = 5;
-            // 
-            // Search
-            // 
-            this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search.Location = new System.Drawing.Point(539, 25);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(108, 33);
-            this.Search.TabIndex = 6;
-            this.Search.Text = "&Search";
-            this.Search.UseVisualStyleBackColor = true;
             // 
             // Vendor
             // 
@@ -228,6 +200,34 @@
             this.ModifiedDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ModifiedDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ModifiedDate.Width = 150;
+            // 
+            // SearchTag
+            // 
+            this.SearchTag.AutoSize = true;
+            this.SearchTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTag.Location = new System.Drawing.Point(29, 25);
+            this.SearchTag.Name = "SearchTag";
+            this.SearchTag.Size = new System.Drawing.Size(191, 29);
+            this.SearchTag.TabIndex = 4;
+            this.SearchTag.Text = "Search by Name";
+            // 
+            // SearchBox
+            // 
+            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBox.Location = new System.Drawing.Point(226, 23);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(297, 35);
+            this.SearchBox.TabIndex = 5;
+            // 
+            // Search
+            // 
+            this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search.Location = new System.Drawing.Point(539, 25);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(108, 33);
+            this.Search.TabIndex = 6;
+            this.Search.Text = "&Search";
+            this.Search.UseVisualStyleBackColor = true;
             // 
             // EMS
             // 
