@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EMS
 {
-    public partial class Form1 : Form
+    public partial class NewHiring : Form
     {
-        public Form1()
+        public NewHiring()
         {
             InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
