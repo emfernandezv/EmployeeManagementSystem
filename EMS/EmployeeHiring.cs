@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace EMS
 {
+
     public class EmployeeHiring : Employee
     {
         public int Area;
         public DateTime HiringDate;
         public float salary;
+        public List<EmployeeHiring> EmployeeList = new List<EmployeeHiring>();
 
-        public EmployeeHiring(int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus, string NewCB, DateTime NewCD, string NewMB, DateTime NewMD, int NewArea, DateTime NHD, float salary) : base (NewID, NewFN, NewLN, NewDOB, NewGender, NewAddress, NewStatus, NewCB, NewCD, NewMB, NewMD)
+        public EmployeeHiring(int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus, string action, string NewCB, DateTime NewCD, int NewArea, DateTime NHD, float salary) : base (NewID, NewFN, NewLN, NewDOB, NewGender, NewAddress, NewStatus, action, NewCB, NewCD)
         {
             //Employee Fields
             SetID(NewID);
@@ -24,10 +26,7 @@ namespace EMS
             SetAddress(NewAddress);
             SetStatus(NewStatus);
             //Audit Fields
-            SetCreatedBy(NewCB);
-            SetCreatedDate(NewCD);
-            SetModifiedBy(NewMB);
-            SetModifiedDate(NewMD);
+            setAction(action, NewCB, NewCD);
             //Hiring Fields
             SetArea(NewArea);
             SetHiringDate(NHD);

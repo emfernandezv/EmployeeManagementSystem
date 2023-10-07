@@ -39,11 +39,11 @@
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Gender = new System.Windows.Forms.ComboBox();
             this.CreatedBy = new System.Windows.Forms.TextBox();
             this.CreatedByLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Salary = new System.Windows.Forms.Label();
+            this.Salary = new System.Windows.Forms.TextBox();
+            this.SalaryLabel = new System.Windows.Forms.Label();
             this.AreaLabel = new System.Windows.Forms.Label();
             this.HiringDateLabel = new System.Windows.Forms.Label();
             this.StatusLabel = new System.Windows.Forms.Label();
@@ -59,6 +59,9 @@
             this.CreatedDate = new System.Windows.Forms.TextBox();
             this.CreatedDateLabel = new System.Windows.Forms.Label();
             this.AuditFieldsGroup = new System.Windows.Forms.GroupBox();
+            this.Save = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Close = new System.Windows.Forms.Button();
             this.AuditFieldsGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +82,7 @@
             this.Id.Location = new System.Drawing.Point(199, 34);
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(100, 35);
-            this.Id.TabIndex = 1;
+            this.Id.TabIndex = 0;
             // 
             // Address
             // 
@@ -87,7 +90,8 @@
             this.Address.Location = new System.Drawing.Point(199, 334);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(563, 35);
-            this.Address.TabIndex = 3;
+            this.Address.TabIndex = 5;
+            
             // 
             // AddressLabel
             // 
@@ -125,7 +129,8 @@
             this.LastName.Location = new System.Drawing.Point(199, 154);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(563, 35);
-            this.LastName.TabIndex = 9;
+            this.LastName.TabIndex = 2;
+            
             // 
             // LastNameLabel
             // 
@@ -143,7 +148,8 @@
             this.FirstName.Location = new System.Drawing.Point(199, 94);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(563, 35);
-            this.FirstName.TabIndex = 11;
+            this.FirstName.TabIndex = 1;
+            
             // 
             // FirstNameLabel
             // 
@@ -155,18 +161,19 @@
             this.FirstNameLabel.TabIndex = 10;
             this.FirstNameLabel.Text = "First Name";
             // 
-            // comboBox1
+            // Gender
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gender.FormattingEnabled = true;
+            this.Gender.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Other"});
-            this.comboBox1.Location = new System.Drawing.Point(199, 271);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(206, 37);
-            this.comboBox1.TabIndex = 12;
+            this.Gender.Location = new System.Drawing.Point(199, 271);
+            this.Gender.Name = "Gender";
+            this.Gender.Size = new System.Drawing.Size(206, 37);
+            this.Gender.TabIndex = 4;
+            
             // 
             // CreatedBy
             // 
@@ -174,7 +181,7 @@
             this.CreatedBy.Location = new System.Drawing.Point(187, 39);
             this.CreatedBy.Name = "CreatedBy";
             this.CreatedBy.Size = new System.Drawing.Size(150, 35);
-            this.CreatedBy.TabIndex = 14;
+            this.CreatedBy.TabIndex = 0;
             // 
             // CreatedByLabel
             // 
@@ -185,23 +192,24 @@
             this.CreatedByLabel.TabIndex = 13;
             this.CreatedByLabel.Text = "Created By";
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(197, 571);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 35);
-            this.textBox2.TabIndex = 16;
-            // 
             // Salary
             // 
-            this.Salary.AutoSize = true;
             this.Salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salary.Location = new System.Drawing.Point(32, 574);
+            this.Salary.Location = new System.Drawing.Point(197, 571);
             this.Salary.Name = "Salary";
-            this.Salary.Size = new System.Drawing.Size(159, 29);
-            this.Salary.TabIndex = 15;
-            this.Salary.Text = "Annual Salary";
+            this.Salary.Size = new System.Drawing.Size(188, 35);
+            this.Salary.TabIndex = 10;
+            
+            // 
+            // SalaryLabel
+            // 
+            this.SalaryLabel.AutoSize = true;
+            this.SalaryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalaryLabel.Location = new System.Drawing.Point(32, 574);
+            this.SalaryLabel.Name = "SalaryLabel";
+            this.SalaryLabel.Size = new System.Drawing.Size(159, 29);
+            this.SalaryLabel.TabIndex = 15;
+            this.SalaryLabel.Text = "Annual Salary";
             // 
             // AreaLabel
             // 
@@ -236,14 +244,16 @@
             // StatusA
             // 
             this.StatusA.AutoSize = true;
+            this.StatusA.Checked = true;
             this.StatusA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusA.Location = new System.Drawing.Point(199, 394);
             this.StatusA.Name = "StatusA";
             this.StatusA.Size = new System.Drawing.Size(102, 33);
-            this.StatusA.TabIndex = 23;
+            this.StatusA.TabIndex = 6;
             this.StatusA.TabStop = true;
             this.StatusA.Text = "Active";
             this.StatusA.UseVisualStyleBackColor = true;
+            this.StatusA.CheckedChanged += new System.EventHandler(this.StatusA_CheckedChanged);
             // 
             // StatusI
             // 
@@ -252,10 +262,10 @@
             this.StatusI.Location = new System.Drawing.Point(322, 394);
             this.StatusI.Name = "StatusI";
             this.StatusI.Size = new System.Drawing.Size(119, 33);
-            this.StatusI.TabIndex = 24;
-            this.StatusI.TabStop = true;
+            this.StatusI.TabIndex = 7;
             this.StatusI.Text = "Inactive";
             this.StatusI.UseVisualStyleBackColor = true;
+            this.StatusI.CheckedChanged += new System.EventHandler(this.StatusI_CheckedChanged);
             // 
             // DateOfBirth
             // 
@@ -263,7 +273,8 @@
             this.DateOfBirth.Location = new System.Drawing.Point(199, 214);
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.Size = new System.Drawing.Size(427, 35);
-            this.DateOfBirth.TabIndex = 25;
+            this.DateOfBirth.TabIndex = 3;
+            
             // 
             // HiringDate
             // 
@@ -271,7 +282,8 @@
             this.HiringDate.Location = new System.Drawing.Point(199, 454);
             this.HiringDate.Name = "HiringDate";
             this.HiringDate.Size = new System.Drawing.Size(427, 35);
-            this.HiringDate.TabIndex = 26;
+            this.HiringDate.TabIndex = 8;
+            
             // 
             // Area
             // 
@@ -285,7 +297,8 @@
             this.Area.Location = new System.Drawing.Point(199, 514);
             this.Area.Name = "Area";
             this.Area.Size = new System.Drawing.Size(427, 37);
-            this.Area.TabIndex = 27;
+            this.Area.TabIndex = 9;
+            
             // 
             // ModifiedDate
             // 
@@ -293,7 +306,7 @@
             this.ModifiedDate.Location = new System.Drawing.Point(551, 104);
             this.ModifiedDate.Name = "ModifiedDate";
             this.ModifiedDate.Size = new System.Drawing.Size(188, 35);
-            this.ModifiedDate.TabIndex = 29;
+            this.ModifiedDate.TabIndex = 0;
             // 
             // ModifiedDateLabel
             // 
@@ -310,7 +323,7 @@
             this.ModifiedBy.Location = new System.Drawing.Point(187, 104);
             this.ModifiedBy.Name = "ModifiedBy";
             this.ModifiedBy.Size = new System.Drawing.Size(150, 35);
-            this.ModifiedBy.TabIndex = 31;
+            this.ModifiedBy.TabIndex = 0;
             // 
             // ModifiedByLabel
             // 
@@ -327,7 +340,7 @@
             this.CreatedDate.Location = new System.Drawing.Point(551, 39);
             this.CreatedDate.Name = "CreatedDate";
             this.CreatedDate.Size = new System.Drawing.Size(188, 35);
-            this.CreatedDate.TabIndex = 33;
+            this.CreatedDate.TabIndex = 0;
             // 
             // CreatedDateLabel
             // 
@@ -356,11 +369,45 @@
             this.AuditFieldsGroup.TabStop = false;
             this.AuditFieldsGroup.Text = "Audit";
             // 
+            // Save
+            // 
+            this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save.Location = new System.Drawing.Point(497, 826);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(129, 45);
+            this.Save.TabIndex = 35;
+            this.Save.Text = "&Save";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(209, 863);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(8, 8);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // Close
+            // 
+            this.Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.Location = new System.Drawing.Point(642, 826);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(135, 45);
+            this.Close.TabIndex = 37;
+            this.Close.Text = "&Close";
+            this.Close.UseVisualStyleBackColor = true;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            // 
             // NewHiring
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 900);
+            this.Controls.Add(this.Close);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.AuditFieldsGroup);
             this.Controls.Add(this.Area);
             this.Controls.Add(this.HiringDate);
@@ -370,9 +417,9 @@
             this.Controls.Add(this.StatusLabel);
             this.Controls.Add(this.HiringDateLabel);
             this.Controls.Add(this.AreaLabel);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Salary);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.SalaryLabel);
+            this.Controls.Add(this.Gender);
             this.Controls.Add(this.FirstName);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.LastName);
@@ -405,11 +452,11 @@
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.Label FirstNameLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Gender;
         private System.Windows.Forms.TextBox CreatedBy;
         private System.Windows.Forms.Label CreatedByLabel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label Salary;
+        private System.Windows.Forms.TextBox Salary;
+        private System.Windows.Forms.Label SalaryLabel;
         private System.Windows.Forms.Label AreaLabel;
         private System.Windows.Forms.Label HiringDateLabel;
         private System.Windows.Forms.Label StatusLabel;
@@ -425,5 +472,8 @@
         private System.Windows.Forms.TextBox CreatedDate;
         private System.Windows.Forms.Label CreatedDateLabel;
         private System.Windows.Forms.GroupBox AuditFieldsGroup;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Close;
     }
 }

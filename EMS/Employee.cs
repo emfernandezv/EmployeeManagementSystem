@@ -28,7 +28,7 @@ namespace EMS
         public string ModifiedBy;
         public DateTime ModifiedDate;
 
-        public Employee (int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus, string NewCB, DateTime NewCD, string NewMB, DateTime NewMD)
+        public Employee (int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus, string action, string NewCB, DateTime NewCD)
         {
             SetID(NewID);
             SetFirstName(NewFN);
@@ -38,10 +38,11 @@ namespace EMS
             SetAddress(NewAddress);
             SetStatus(NewStatus);
             //Audit Fields
-            SetCreatedBy(NewCB);
-            SetCreatedDate(NewCD);
-            SetModifiedBy(NewMB);
-            SetModifiedDate(NewMD);
+            setAction(action,NewCB, NewCD);
+           
+
+
+            
 
         }
 
@@ -90,7 +91,19 @@ namespace EMS
         {
             CreatedDate = NewMD;
         }
-
+        protected void setAction(string action,string NewCB, DateTime NewCD)
+        {
+            if (action == "NEW")
+            {
+                SetCreatedBy(NewCB);
+                SetCreatedDate(NewCD);
+            }
+            else
+            {
+                SetModifiedBy(NewCB);
+                SetModifiedDate(NewCD);
+            }
+        }
         // getters
         internal int GetID()
         {

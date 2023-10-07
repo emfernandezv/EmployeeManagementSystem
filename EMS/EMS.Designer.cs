@@ -32,7 +32,7 @@
             this.NewEmployee = new System.Windows.Forms.Button();
             this.EditEmployee = new System.Windows.Forms.Button();
             this.ViewEmployee = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.EmployeeData = new System.Windows.Forms.DataGridView();
             this.Vendor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DayOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.SearchTag = new System.Windows.Forms.Label();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeData)).BeginInit();
             this.SuspendLayout();
             // 
             // NewEmployee
@@ -72,6 +72,7 @@
             this.EditEmployee.TabIndex = 1;
             this.EditEmployee.Text = "&Edit";
             this.EditEmployee.UseVisualStyleBackColor = true;
+            this.EditEmployee.Click += new System.EventHandler(this.EditEmployee_Click);
             // 
             // ViewEmployee
             // 
@@ -82,11 +83,12 @@
             this.ViewEmployee.TabIndex = 2;
             this.ViewEmployee.Text = "&View";
             this.ViewEmployee.UseVisualStyleBackColor = true;
+            this.ViewEmployee.Click += new System.EventHandler(this.ViewEmployee_Click);
             // 
-            // dataGridView1
+            // EmployeeData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmployeeData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Vendor,
             this.FullName,
             this.DayOfBirth,
@@ -100,13 +102,12 @@
             this.CreatedDate,
             this.ModifiedBy,
             this.ModifiedDate});
-            this.dataGridView1.Location = new System.Drawing.Point(24, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1611, 929);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.EmployeeData.Location = new System.Drawing.Point(24, 84);
+            this.EmployeeData.Name = "EmployeeData";
+            this.EmployeeData.RowHeadersWidth = 62;
+            this.EmployeeData.RowTemplate.Height = 28;
+            this.EmployeeData.Size = new System.Drawing.Size(1611, 929);
+            this.EmployeeData.TabIndex = 3;
             // 
             // Vendor
             // 
@@ -237,14 +238,14 @@
             this.Controls.Add(this.Search);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.SearchTag);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.EmployeeData);
             this.Controls.Add(this.ViewEmployee);
             this.Controls.Add(this.EditEmployee);
             this.Controls.Add(this.NewEmployee);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EMS";
             this.Text = "Employee Management System";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,7 +256,7 @@
         private System.Windows.Forms.Button NewEmployee;
         private System.Windows.Forms.Button EditEmployee;
         private System.Windows.Forms.Button ViewEmployee;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView EmployeeData;
         private System.Windows.Forms.Label SearchTag;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Button Search;
