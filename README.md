@@ -1,4 +1,4 @@
-# EmployeeManagementSystem Overview
+#EmployeeManagementSystem Overview
 C# Program to manage new employees (Create, View, Modify).
 I will create a small UI system to create, edit, delete, and view employee data. 
 The data will be stored in an external file to simulate a “database source”.
@@ -13,6 +13,6 @@ https://youtu.be/R9AfUAYlPoY
 * Language Version 9.0
 
 #Usefull Websites:
-* [C#Corner] (ttps://www.c-sharpcorner.com)
+* [C#Corner] (https://www.c-sharpcorner.com)
 * [StackOverFlow] (https://stackoverflow.com/)
 
