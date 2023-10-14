@@ -26,6 +26,7 @@ namespace EMS
         {
             return JsonConvert.SerializeObject(Obj.Where(c => c != null));
         }
+        //to save data into a Json file
         public void SaveFile(List<EmployeeHiring> Obj)
         {
             FileStream fParameter = new FileStream(getDir(), FileMode.Create, FileAccess.Write);
@@ -35,6 +36,7 @@ namespace EMS
             m_WriterParameter.Flush();
             m_WriterParameter.Close();
         }
+        // to load values from a file
         public List<EmployeeHiring> LoadFile()
         {
 

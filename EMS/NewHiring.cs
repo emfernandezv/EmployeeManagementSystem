@@ -157,7 +157,7 @@ namespace EMS
                 return 1;
             };
         }
-
+        //validating fields
         private int FirstName_Validate()
         {
             return ValidateText("First Name", FirstName);
@@ -220,7 +220,7 @@ namespace EMS
         {
             return ValidateNumber("Salary", Salary);
         }
-
+        // control form closing
         private void Close_Click(object sender, EventArgs e)
         {
             AutoValidate = AutoValidate.Disable;
@@ -228,7 +228,7 @@ namespace EMS
             MainList.Show();
             this.Close();
         }
-
+        // save function
         private void Save_Click(object sender, EventArgs e)
         {
             if (FirstName_Validate() > 0 
@@ -284,9 +284,6 @@ namespace EMS
 
             }
         }
-
-
-
 
     }
 }
