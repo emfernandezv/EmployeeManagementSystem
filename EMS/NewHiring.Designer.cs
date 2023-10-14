@@ -89,9 +89,8 @@
             this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Address.Location = new System.Drawing.Point(199, 334);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(563, 35);
+            this.Address.Size = new System.Drawing.Size(459, 35);
             this.Address.TabIndex = 5;
-            
             // 
             // AddressLabel
             // 
@@ -128,9 +127,8 @@
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastName.Location = new System.Drawing.Point(199, 154);
             this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(563, 35);
+            this.LastName.Size = new System.Drawing.Size(459, 35);
             this.LastName.TabIndex = 2;
-            
             // 
             // LastNameLabel
             // 
@@ -147,9 +145,8 @@
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName.Location = new System.Drawing.Point(199, 94);
             this.FirstName.Name = "FirstName";
-            this.FirstName.Size = new System.Drawing.Size(563, 35);
+            this.FirstName.Size = new System.Drawing.Size(459, 35);
             this.FirstName.TabIndex = 1;
-            
             // 
             // FirstNameLabel
             // 
@@ -173,15 +170,15 @@
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(206, 37);
             this.Gender.TabIndex = 4;
-            
             // 
             // CreatedBy
             // 
             this.CreatedBy.Enabled = false;
-            this.CreatedBy.Location = new System.Drawing.Point(187, 39);
+            this.CreatedBy.Location = new System.Drawing.Point(201, 39);
             this.CreatedBy.Name = "CreatedBy";
-            this.CreatedBy.Size = new System.Drawing.Size(150, 35);
+            this.CreatedBy.Size = new System.Drawing.Size(403, 35);
             this.CreatedBy.TabIndex = 0;
+            this.CreatedBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CreatedByLabel
             // 
@@ -194,12 +191,14 @@
             // 
             // Salary
             // 
+            this.Salary.BackColor = System.Drawing.Color.White;
+            this.Salary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salary.Location = new System.Drawing.Point(197, 571);
             this.Salary.Name = "Salary";
             this.Salary.Size = new System.Drawing.Size(188, 35);
             this.Salary.TabIndex = 10;
-            
+            this.Salary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SalaryLabel
             // 
@@ -274,7 +273,6 @@
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.Size = new System.Drawing.Size(427, 35);
             this.DateOfBirth.TabIndex = 3;
-            
             // 
             // HiringDate
             // 
@@ -283,7 +281,6 @@
             this.HiringDate.Name = "HiringDate";
             this.HiringDate.Size = new System.Drawing.Size(427, 35);
             this.HiringDate.TabIndex = 8;
-            
             // 
             // Area
             // 
@@ -298,20 +295,20 @@
             this.Area.Name = "Area";
             this.Area.Size = new System.Drawing.Size(427, 37);
             this.Area.TabIndex = 9;
-            
             // 
             // ModifiedDate
             // 
             this.ModifiedDate.Enabled = false;
-            this.ModifiedDate.Location = new System.Drawing.Point(551, 104);
+            this.ModifiedDate.Location = new System.Drawing.Point(201, 207);
             this.ModifiedDate.Name = "ModifiedDate";
-            this.ModifiedDate.Size = new System.Drawing.Size(188, 35);
+            this.ModifiedDate.Size = new System.Drawing.Size(403, 35);
             this.ModifiedDate.TabIndex = 0;
+            this.ModifiedDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ModifiedDateLabel
             // 
             this.ModifiedDateLabel.AutoSize = true;
-            this.ModifiedDateLabel.Location = new System.Drawing.Point(368, 107);
+            this.ModifiedDateLabel.Location = new System.Drawing.Point(18, 210);
             this.ModifiedDateLabel.Name = "ModifiedDateLabel";
             this.ModifiedDateLabel.Size = new System.Drawing.Size(176, 29);
             this.ModifiedDateLabel.TabIndex = 28;
@@ -320,15 +317,16 @@
             // ModifiedBy
             // 
             this.ModifiedBy.Enabled = false;
-            this.ModifiedBy.Location = new System.Drawing.Point(187, 104);
+            this.ModifiedBy.Location = new System.Drawing.Point(201, 151);
             this.ModifiedBy.Name = "ModifiedBy";
-            this.ModifiedBy.Size = new System.Drawing.Size(150, 35);
+            this.ModifiedBy.Size = new System.Drawing.Size(403, 35);
             this.ModifiedBy.TabIndex = 0;
+            this.ModifiedBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ModifiedByLabel
             // 
             this.ModifiedByLabel.AutoSize = true;
-            this.ModifiedByLabel.Location = new System.Drawing.Point(18, 104);
+            this.ModifiedByLabel.Location = new System.Drawing.Point(18, 153);
             this.ModifiedByLabel.Name = "ModifiedByLabel";
             this.ModifiedByLabel.Size = new System.Drawing.Size(151, 29);
             this.ModifiedByLabel.TabIndex = 30;
@@ -337,15 +335,16 @@
             // CreatedDate
             // 
             this.CreatedDate.Enabled = false;
-            this.CreatedDate.Location = new System.Drawing.Point(551, 39);
+            this.CreatedDate.Location = new System.Drawing.Point(201, 95);
             this.CreatedDate.Name = "CreatedDate";
-            this.CreatedDate.Size = new System.Drawing.Size(188, 35);
+            this.CreatedDate.Size = new System.Drawing.Size(403, 35);
             this.CreatedDate.TabIndex = 0;
+            this.CreatedDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CreatedDateLabel
             // 
             this.CreatedDateLabel.AutoSize = true;
-            this.CreatedDateLabel.Location = new System.Drawing.Point(368, 42);
+            this.CreatedDateLabel.Location = new System.Drawing.Point(18, 96);
             this.CreatedDateLabel.Name = "CreatedDateLabel";
             this.CreatedDateLabel.Size = new System.Drawing.Size(167, 29);
             this.CreatedDateLabel.TabIndex = 32;
@@ -364,7 +363,7 @@
             this.AuditFieldsGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AuditFieldsGroup.Location = new System.Drawing.Point(22, 632);
             this.AuditFieldsGroup.Name = "AuditFieldsGroup";
-            this.AuditFieldsGroup.Size = new System.Drawing.Size(755, 160);
+            this.AuditFieldsGroup.Size = new System.Drawing.Size(636, 280);
             this.AuditFieldsGroup.TabIndex = 34;
             this.AuditFieldsGroup.TabStop = false;
             this.AuditFieldsGroup.Text = "Audit";
@@ -372,7 +371,7 @@
             // Save
             // 
             this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save.Location = new System.Drawing.Point(497, 826);
+            this.Save.Location = new System.Drawing.Point(378, 940);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(129, 45);
             this.Save.TabIndex = 35;
@@ -392,7 +391,7 @@
             // Close
             // 
             this.Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(642, 826);
+            this.Close.Location = new System.Drawing.Point(523, 940);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(135, 45);
             this.Close.TabIndex = 37;
@@ -404,7 +403,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 900);
+            this.ClientSize = new System.Drawing.Size(672, 1016);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Save);
@@ -430,7 +429,9 @@
             this.Controls.Add(this.AddressLabel);
             this.Controls.Add(this.Id);
             this.Controls.Add(this.IdLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "NewHiring";
             this.Text = "New Employee";
             this.AuditFieldsGroup.ResumeLayout(false);

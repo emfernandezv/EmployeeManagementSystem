@@ -28,7 +28,7 @@ namespace EMS
         public string ModifiedBy;
         public DateTime ModifiedDate;
 
-        public Employee (int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus, string action, string NewCB, DateTime NewCD)
+        public Employee (int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus, string NewCB, DateTime NewCD, string NewMB, DateTime NewMD)
         {
             SetID(NewID);
             SetFirstName(NewFN);
@@ -38,7 +38,7 @@ namespace EMS
             SetAddress(NewAddress);
             SetStatus(NewStatus);
             //Audit Fields
-            setAction(action,NewCB, NewCD);
+            setAudit(NewCB, NewCD, NewMB, NewMD);
            
 
 
@@ -89,20 +89,14 @@ namespace EMS
         }
         protected void SetModifiedDate(DateTime NewMD)
         {
-            CreatedDate = NewMD;
+            ModifiedDate = NewMD;
         }
-        protected void setAction(string action,string NewCB, DateTime NewCD)
+        protected void setAudit(string NewCB, DateTime NewCD, string NewMB, DateTime NewMD)
         {
-            if (action == "NEW")
-            {
                 SetCreatedBy(NewCB);
                 SetCreatedDate(NewCD);
-            }
-            else
-            {
-                SetModifiedBy(NewCB);
-                SetModifiedDate(NewCD);
-            }
+                SetModifiedBy(NewMB);
+                SetModifiedDate(NewMD);
         }
         // getters
         internal int GetID()
@@ -125,25 +119,9 @@ namespace EMS
         {
             return DateOfBirth;
         }
-        internal string GetGender(string type)
+        internal string GetGender()
         {
-            if (type == "D") { 
-                if (Gender == "M")
-                {
-                    return "Male";
-                }else if (Gender == "F")
-                {
-                    return "Female";
-                }
-                else
-                {
-                    return "Other";
-                }
-            }
-            else
-            {
                 return Gender;
-            }
         }
         internal Int32 GetAge()
         {

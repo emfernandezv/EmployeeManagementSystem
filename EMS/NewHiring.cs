@@ -18,14 +18,20 @@ namespace EMS
     {
         public string FormAction;
         protected EmployeeHiring EmployeeObj;
-        public NewHiring(string action, int seed)
+        int EmployeeSeed = 0;
+
+        public NewHiring(string action, int seed, EmployeeHiring Obj)
         {
             FormAction = action;
             InitializeComponent();
-            LoadForm(FormAction);
+            EmployeeObj = Obj;
+            LoadForm(FormAction, Obj);
+            EmployeeSeed = seed;
+
+
         }
         //to load the form according to the action
-        private void LoadForm(string action)
+        private void LoadForm(string action, EmployeeHiring obj)
         {
             FirstName.Enabled = true;
             LastName.Enabled = true;
@@ -36,7 +42,7 @@ namespace EMS
             StatusI.Enabled = true;
             Area.Enabled = true;
             Salary.Enabled = true;
-            
+
             switch (action)
             {
                 case "NEW":
@@ -62,6 +68,35 @@ namespace EMS
                     Salary.Enabled = false;
                     Save.Enabled = false;
                     break;
+            }
+
+            if (action == "MODIFY" || action == "VIEW")
+            {
+                Id.Text = obj.Id.ToString();
+                FirstName.Text = obj.GetFirstName();
+                LastName.Text = obj.GetLastName();
+                DateOfBirth.Text = obj.GetDOB().ToShortDateString();
+                Gender.Text = obj.GetGender();
+                Address.Text = obj.GetAddress();
+                if(obj.GetStatus("C") == "A")
+                {
+                    StatusA.Checked = true;
+                    StatusI.Checked = false;
+                }
+                else
+                {
+                    StatusA.Checked = false;
+                    StatusI.Checked = true;
+                }
+                HiringDate.Text = obj.HiringDate.ToShortDateString();
+                Area.Text = obj.Area.ToString();
+                Salary.Text = obj.GetSalary().ToString();
+
+                //AUDIT FIELDS
+                CreatedBy.Text = obj.GetCreatedBy();
+                CreatedDate.Text = obj.GetCreatedDate().ToString();
+                ModifiedBy.Text = obj.GetModifiedBy(); 
+                ModifiedDate.Text = obj.GetModifiedDate().ToString();
             }
         }
         
@@ -189,7 +224,9 @@ namespace EMS
         private void Close_Click(object sender, EventArgs e)
         {
             AutoValidate = AutoValidate.Disable;
-            Close();
+            EMS MainList = (EMS)Tag;
+            MainList.Show();
+            this.Close();
         }
 
         private void Save_Click(object sender, EventArgs e)
@@ -210,26 +247,41 @@ namespace EMS
                 {
                     status = "I";
                 }
-
-                    EmployeeObj = new(  Int32.Parse(Id.Text), 
+                    
+                EmployeeObj = new(      EmployeeSeed, 
                                         FirstName.Text, 
                                         LastName.Text,
                                         DateTime.Parse(DateOfBirth.Text), 
                                         Gender.Text, 
                                         Address.Text,
                                         status,
-                                        FormAction,
                                         Environment.UserName,
                                         DateTime.Now,
-                                        Int32.Parse(Area.Text),
+                                        Environment.UserName,
+                                        DateTime.Now,
+                                        Area.Text,
                                         DateTime.Parse(HiringDate.Text),
                                         float.Parse(Salary.Text)
                                       );
 
                 EMS MainList = (EMS)Tag;
-                MainList.EmployeeList.Add(EmployeeObj);
-                MainList.LoadData();
+                if (FormAction == "NEW")
+                {
+                    MainList.EmployeeList.Add(EmployeeObj);
+                }
+                else
+                {
+                    var index = MainList.EmployeeList.FindIndex(x => x.Id == EmployeeSeed);
+                    if (index > -1)
+                    {
+                        MainList.EmployeeList[index] = EmployeeObj;
+                    }
+                }
+                
+                MainList.LoadListData();
+                MainList.Show();
                 this.Close();
+
             }
         }
 

@@ -10,3 +10,6 @@ C:\Users\eduardo.fernandez\OneDrive - AdvancedMD\Documents\Personal\BYU-Idaho-Sc
 C:\Users\eduardo.fernandez\OneDrive - AdvancedMD\Documents\Personal\BYU-Idaho-School-Work\CSE310 Applied Programming\Sprint 2\EmployeeManagementSystem\EMS\obj\Debug\EMS.csproj.CoreCompileInputs.cache
 C:\Users\eduardo.fernandez\OneDrive - AdvancedMD\Documents\Personal\BYU-Idaho-School-Work\CSE310 Applied Programming\Sprint 2\EmployeeManagementSystem\EMS\obj\Debug\EMS.exe
 C:\Users\eduardo.fernandez\OneDrive - AdvancedMD\Documents\Personal\BYU-Idaho-School-Work\CSE310 Applied Programming\Sprint 2\EmployeeManagementSystem\EMS\obj\Debug\EMS.pdb
+C:\Users\eduardo.fernandez\OneDrive - AdvancedMD\Documents\Personal\BYU-Idaho-School-Work\CSE310 Applied Programming\Sprint 2\EmployeeManagementSystem\EMS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\eduardo.fernandez\OneDrive - AdvancedMD\Documents\Personal\BYU-Idaho-School-Work\CSE310 Applied Programming\Sprint 2\EmployeeManagementSystem\EMS\bin\Debug\Newtonsoft.Json.xml
+C:\Users\eduardo.fernandez\OneDrive - AdvancedMD\Documents\Personal\BYU-Idaho-School-Work\CSE310 Applied Programming\Sprint 2\EmployeeManagementSystem\EMS\obj\Debug\EMS.csproj.CopyComplete

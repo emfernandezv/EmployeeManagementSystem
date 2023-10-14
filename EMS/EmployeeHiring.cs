@@ -10,12 +10,12 @@ namespace EMS
 
     public class EmployeeHiring : Employee
     {
-        public int Area;
+        public string Area;
         public DateTime HiringDate;
-        public float salary;
+        public float Salary;
         public List<EmployeeHiring> EmployeeList = new List<EmployeeHiring>();
 
-        public EmployeeHiring(int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus, string action, string NewCB, DateTime NewCD, int NewArea, DateTime NHD, float salary) : base (NewID, NewFN, NewLN, NewDOB, NewGender, NewAddress, NewStatus, action, NewCB, NewCD)
+        public EmployeeHiring(int NewID, string NewFN, string NewLN, DateTime NewDOB, string NewGender, string NewAddress, string NewStatus,string NewCB, DateTime NewCD, string NewMB, DateTime NewMD, string NewArea, DateTime NHD, float NewSalary) : base (NewID, NewFN, NewLN, NewDOB, NewGender, NewAddress, NewStatus, NewCB, NewCD, NewMB, NewMD)
         {
             //Employee Fields
             SetID(NewID);
@@ -26,14 +26,14 @@ namespace EMS
             SetAddress(NewAddress);
             SetStatus(NewStatus);
             //Audit Fields
-            setAction(action, NewCB, NewCD);
+            setAudit(NewCB, NewCD, NewMB, NewMD);
             //Hiring Fields
             SetArea(NewArea);
             SetHiringDate(NHD);
-            SetSalary(salary);
+            SetSalary(NewSalary);
         }
         //setters
-        private void SetArea(int NewArea)
+        private void SetArea(string NewArea)
         {
             Area = NewArea;
         }
@@ -43,29 +43,12 @@ namespace EMS
         }
         private void SetSalary(float sal)
         {
-            salary = sal;
+            Salary = sal;
         }
         //getters
-        public string GetArea(string type)
+        public string GetArea()
         {
-            if (type == "D")
-            {
-                switch (Area)
-                {
-                    case 1:
-                        return "Development";
-                    case 2:
-                        return "Q.A.";
-                    case 3:
-                        return "DevOps";
-                    default:
-                        return "Marketing";
-                }
-            }
-            else
-            {
-                return Area.ToString();
-            }
+                return Area;
         }
         public DateTime GetHiringDate()
         {
@@ -73,7 +56,7 @@ namespace EMS
         }
         public float GetSalary()
         {
-            return salary;
+            return Salary;
         }
         
     }
